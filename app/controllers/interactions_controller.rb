@@ -5,7 +5,7 @@ class InteractionsController < ApplicationController
   def get_interactions
   end
 
-  # PUT This method taked the FHIR patient ID and makes a call to the EHR 
+  # GET This method taked the FHIR patient ID and makes a call to the EHR 
   # to grab the patients prescriptions
   def update_patient
     if params[:patient_id].empty?
