@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'test/create_test_patient'
+
   get 'interactions/update_patient'
 
   # The priority is based upon order of creation: first created -> highest priority.

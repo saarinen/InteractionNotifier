@@ -1,6 +1,11 @@
-<h1>Interactions#get_interactions</h1>
-<p>Find me in app/views/interactions/get_interactions.html.erb</p>
-
-<% @medications.each do |code| %>
-  Medication found - code: <%= code %>
-<% end %>
+<div class="inner cover">
+  <h1 class="cover-heading">Interaction Checked for patient: <%= params[:patient_id] %></h1>
+  <% if @interactionGroup.nil? %>
+    <p class="lead">No drug interactions found for drugs with id's: <%= @medications.join(', ') %></p>
+  <% else %>
+    <p class="lead">Drug interactions found for drugs with id's: <%= @medications.join(', ') %></p>
+    <p>
+      Payload: <%= @warnings %>
+    </p>
+  <% end %>
+</div>
