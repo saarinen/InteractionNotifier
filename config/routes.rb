@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  post 'subscriptions/subscribe_sms'
+
+  post 'subscriptions/subscribe_email'
+
+  get 'subscriptions/subscribe'
+
   get 'test/create_test_patient'
 
   get 'interactions/update_patient'
